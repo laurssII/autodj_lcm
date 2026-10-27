@@ -1,0 +1,45 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      target: api
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      AUTODJ_WORKER: external # el trabajo pesado lo hace el servicio `worker`
+    volumes:
+      - autodj-data:/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # para usar Ollama instalado en tu equipo
+    restart: unless-stopped
+
+  # Análisis, letras, renderizado de mezclas y stems. Comparte con la API el volumen y la cola de trabajos
+  # (SQLite en /data: los dos contenedores tienen que estar en la misma máquina).
+  worker:
+    build:
+      context: ./backend
+      target: worker
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      AUTODJ_WORKER: external
+    volumes:
+      - autodj-data:/data
+    # Límites para que el worker no ahogue la interfaz: ajústalos a tu equipo en .env
+    cpus: "${WORKER_CPUS:-3}"
+    mem_limit: "${WORKER_MEM:-4g}"
+    cpu_shares: 512 # con la CPU saturada, la API y el navegador tienen preferencia
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "${AUTODJ_PORT:-8080}:80"
+    restart: unless-stopped
+
+volumes:
+  autodj-data:

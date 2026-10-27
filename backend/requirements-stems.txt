@@ -1,0 +1,4 @@
+# Separación en stems (batería, bajo, armonía, voz) con Demucs. Solo la usa el worker.
+# Instala antes la versión de torch para CPU (la de por defecto en Linux arrastra CUDA, ~2 GB):
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+demucs>=4.0.1
