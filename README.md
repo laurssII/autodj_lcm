@@ -13,7 +13,7 @@ Un DJ automático que funciona en el navegador. Un agente de IA decide en vivo q
 Necesitas [Docker](https://docs.docker.com/get-docker/) con Compose v2.24 o posterior.
 
 ```bash
-git clone <URL-DEL-REPO> autodj && cd autodj
+git clone https://github.com/laurssII/autodj_lcm.git autodj && cd autodj
 cp .env.example .env          # opcional: ahí van las claves de la IA
 docker compose up --build
 ```
@@ -80,7 +80,7 @@ An automatic DJ that runs in the browser. An AI agent decides live which song pl
 You need [Docker](https://docs.docker.com/get-docker/) with Compose v2.24 or later.
 
 ```bash
-git clone <REPO-URL> autodj && cd autodj
+git clone https://github.com/laurssII/autodj_lcm.git autodj && cd autodj
 cp .env.example .env          # optional: AI keys go here
 docker compose up --build
 ```
