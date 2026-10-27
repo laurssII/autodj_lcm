@@ -1,0 +1,4 @@
+# Opcionales: mejoran el análisis. Si no se instalan, AutoDJ usa su análisis propio en numpy
+# y desactiva el wordplay.
+essentia>=2.1b6.dev1110
+faster-whisper>=1.0
