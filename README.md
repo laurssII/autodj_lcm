@@ -1,5 +1,5 @@
 # AutoDJ
-
+[![CI](https://github.com/laurssII/autodj_lcm/actions/workflows/ci.yml/badge.svg)](https://github.com/laurssII/autodj_lcm/actions/workflows/ci.yml)
 *[English version below](#autodj-english)*
 
 Un DJ automático que funciona en el navegador. Un agente de IA decide en vivo qué canción suena después y cómo mezclarla (a compás, por EQ, con las voces separadas…), y atiende peticiones por chat: «ponme algo para saltar», «algo más oscuro», «pínchame esta».
