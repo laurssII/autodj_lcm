@@ -4,10 +4,10 @@
 
 Un DJ automático que funciona en el navegador. Un agente de IA decide en vivo qué canción suena después y cómo mezclarla (a compás, por EQ, con las voces separadas…), y atiende peticiones por chat: «ponme algo para saltar», «algo más oscuro», «pínchame esta».
 
-<!-- Vídeos de demostración
+## Vídeos de demostración
 Vídeo de demostración de algunas funcionalidades https://youtu.be/os2vvJZMr3I
 Vídeo de demostración de reproducción desde archivo local https://youtu.be/lqcweLgDVrA
--->
+
 
 ## Probarlo
 
